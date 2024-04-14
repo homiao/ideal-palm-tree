@@ -21,11 +21,11 @@
 - 23 书吧 https://23shu8.net
 - 热游文学网 http://m.fahao.reyoo.net
 - 平板电子书 www.77nt.info
-- 千千小说网 www.77xsw.cc
-- 星空小说网 www.aixswx.la
-- 平凡文学 www.pksge.com
-- 游人小说网 www.yourenxsw.com
-- 八一中文 www.zwduxs.com
+- 千千小说网 www.77xsw.cc 1
+- 星空小说网 www.aixswx.la 1
+- 平凡文学 www.pksge.com 1
+- 游人小说网 www.yourenxsw.com 0
+- 八一中文 www.zwduxs.com 1
 
 ### 优质组
 
