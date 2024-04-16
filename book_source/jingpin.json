@@ -3733,6 +3733,51 @@
   },
   {
     "bookSourceGroup": "自制",
+    "bookSourceName": "平板电子书",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.pbtxt8.com",
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "首页::/\n玄幻::/xuanhuan<,_{{page}}>/\n修真::/xianxia<,_{{page}}>/\n都市::/dushi<,_{{page}}>/\n历史::/lishi<,_{{page}}>/\n网游::/wangyou<,_{{page}}>/\n科幻::/kehuan<,_{{page}}>/\n言情::/yanqing<,_{{page}}>/\n其他::/qita<,_{{page}}>/\n全本::/quanben<,_{{page}}>/\n排行::/top<,_{{page}}>/\n临时::/bookcase.html",
+    "header": "{\n\t\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\",\n\"Referer\": \"{{baseUrl}}\"\n\t}",
+    "lastUpdateTime": 1694843834379,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "[property$=author]@content",
+      "coverUrl": "[property$=image]@content",
+      "intro": "[property$=description]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property$=latest_chapter_name]@content",
+      "name": "[property$=book_name]@content"
+    },
+    "ruleContent": {
+      "content": "#chaptercontent@html",
+      "nextContentUrl": "text.下一页@href"
+    },
+    "ruleExplore": {},
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": ".item",
+      "name": "a.1@text",
+      "bookUrl": "a.1@href",
+      "author": "a.2@text",
+      "checkKeyWord": "剑来",
+      "coverUrl": "img@data-original",
+      "intro": "dd@text",
+      "kind": ""
+    },
+    "ruleToc": {
+      "chapterList": "#chapterlist a",
+      "chapterName": "text##.*正文卷",
+      "chapterUrl": "href##.*正文卷",
+      "isVolume": "dt@text##.*正文卷"
+    },
+    "searchUrl": "/search/?keyword={{key}}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
     "bookSourceName": "爱笔楼",
     "bookSourceType": 0,
     "bookSourceUrl": "http://m.ibiquzw.info",
@@ -3932,6 +3977,240 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/modules/article/search.php?searchkey={{key}}&submit=搜索, {\"charset\": \"gb2312\", \"method\": \"get\"}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
+    "bookSourceName": "平板电子书",
+    "bookSourceUrl": "http://www.77nt.info",
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "玄幻::/xuanhuan/{{page}}.html\n修真::/xiuzhen/{{page}}.html\n武侠::/wuxia/{{page}}.html\n历史::/lishi/{{page}}.html\n都市::/dushi/{{page}}.html\n网游::/game/{{page}}.html\n科幻::/kehuan/{{page}}.html\n恐怖::/kongbu/{{page}}.html\n穿越::/chuanyue/{{page}}.html\n言情::/yanqing/{{page}}.html\n校园::/xiaoyuan/{{page}}.html",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1698659567803,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": ".title h1@text",
+      "author": "#author@text",
+      "coverUrl": ".cover img@src",
+      "intro": ".info-text@text",
+      "kind": ".crumbs a.1@text",
+      "lastChapter": "",
+      "tocUrl": "#read@href"
+    },
+    "ruleContent": {
+      "content": ".content@textNodes",
+      "nextContentUrl": "text.下一页@href",
+      "replaceRegex": "##{{try{chapter.title}catch(e){\"\"} }}|\n\\(第\\d+.+页\\)"
+    },
+    "ruleExplore": {
+      "bookList": ".book",
+      "name": "a.1@text",
+      "bookUrl": "a.1@href",
+      "lastChapter": "p.1@a@text",
+      "intro": "p.0@text",
+      "coverUrl": "a.0@img@src",
+      "kind": "a.0@text",
+      "author": "a.2@text"
+    },
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": ".zhuopin",
+      "name": "a.1@text",
+      "author": "td.2@text",
+      "coverUrl": "a.0@img@src",
+      "kind": "",
+      "bookUrl": "a.1@href",
+      "lastChapter": ".p-new@a.0@text"
+    },
+    "ruleToc": {
+      "chapterList": ".list dd@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/modules/article/search.php, {\"method\": \"post\", \"body\":\"searchkey={{key}}\"}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
+    "bookSourceName": "天涯书库",
+    "bookSourceUrl": "https://www.tianyabook.com",
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "总排行榜::/top/allvisit/{{page}}.html\n总推荐榜::/top/allvote/{{page}}.html\n月排行榜::/top/monthvisit/{{page}}.html\n月推荐榜::/top/monthvote/{{page}}.html\n周排行榜::/top/weekvisit/{{page}}.html\n周推荐榜::/top/weekvote/{{page}}.html\n总收藏榜::/top/goodnum/{{page}}.html\n本站推荐::/top/toptime/{{page}}.html\n最新入库::/top/postdate/{{page}}.html\n最近更新::/top/lastupdate/{{page}}.html",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 9) Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1698659567803,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": "[property$=book_name]@content",
+      "author": "[property$=author]@content",
+      "coverUrl": "[property$=image]@content",
+      "intro": "[property$=description]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property$=latest_chapter_name]@content"
+    },
+    "ruleContent": {
+      "content": "#htmlContent@textNodes",
+      "nextContentUrl": "text.下一页@href",
+      "replaceRegex": "##\\s*.*百度搜索.*\\s*| 即可找到本书最新章节"
+    },
+    "ruleExplore": {
+      "bookList": ".table tr!0",
+      "name": "a.0@text",
+      "bookUrl": "a.0@href",
+      "lastChapter": "a.1@text",
+      "kind": "a.0@text",
+      "author": "td.2@text"
+    },
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": ".mySearch ul",
+      "name": "a.0@text",
+      "bookUrl": "a.0@href",
+      "author": "li.2@text##作者：",
+      "coverUrl": "",
+      "kind": "",
+      "wordCount": "li.3@text##大小：",
+      "lastChapter": "a.1@text"
+    },
+    "ruleToc": {
+      "chapterList": "#list-chapterAll dd@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/modules/article/search.php?searchkey={{key}}, {\"method\": \"get\",\"charset\": \"gb2312\" }",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
+    "bookSourceName": "369小说网",
+    "bookSourceUrl": "https://www.369book.com",
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "玄幻魔法::/sort/1/{{page}}\n武侠修真:://sort/2/{{page}}\n都市言情::/sort/3/{{page}}\n历史军事::/sort/4/{{page}}\n科幻灵异::/sort/5/{{page}}\n游戏竞技::/sort/6/{{page}}\n女生耽美::/sort/7/{{page}}",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\"}",
+    "lastUpdateTime": 1698659567803,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": ".d_title h1@text",
+      "author": "p_author a@text",
+      "coverUrl": "#bookimg img@src",
+      "intro": "#bookintro p@html",
+      "kind": "#count span.0:2:3@text",
+      "lastChapter": ".chaw a.0@text",
+      "wordCount": "#count span.1@text"
+    },
+    "ruleContent": {
+      "content": "#TextContent@html",
+      "nextContentUrl": "#next_url@href"
+    },
+    "ruleExplore": {},
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": "#sitebox dl",
+      "name": "a.1@text",
+      "bookUrl": "a.1@href",
+      "author": "dd.1@span.0@text",
+      "coverUrl": "img.0@src",
+      "kind": "span.0@text",
+      "intro": ".book_des@text",
+      "wordCount": "dd.1@span.2@text",
+      "lastChapter": "dd.3@a@text"
+    },
+    "ruleToc": {
+      "chapterList": "#chapterList li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/search/, {\"method\": \"post\",\"body\":\"searchkey={{key}}\" }",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
+    "bookSourceName": "热游文学网",
+    "bookSourceUrl": "http://m.fahao.reyoo.net",
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": false,
+    "lastUpdateTime": 1698659567803,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": ".detail h1@text",
+      "author": ".info a@text",
+      "coverUrl": ".detail img.0@src",
+      "intro": ".book-intro@html",
+      "kind": "",
+      "lastChapter": "",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": ".page-content p@html"
+    },
+    "ruleExplore": {},
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": ".column-2",
+      "name": "a.0@text",
+      "bookUrl": "a.0@href",
+      "author": "p.0@textNodes##作者：",
+      "coverUrl": "",
+      "kind": "",
+      "intro": "",
+      "wordCount": "p.1@span@text##字数：",
+      "lastChapter": "a.1@text"
+    },
+    "ruleToc": {
+      "chapterList": ".list!0@li a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/wap.php?action=search, {\"method\": \"post\",\"body\":\"wd={{key}}\" }",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "自制",
+    "bookSourceName": "23书吧",
+    "bookSourceUrl": "https://23shu8.net",
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "奇幻::/qihuan/{{page}}/\n玄幻::/xuanhuan/{{page}}/\n言情::/yanqing/{{page}}/\n都市::/dushi/{{page}}/\n游戏::/youxi/{{page}}/\n竞技::/jingji/{{page}}/\n武侠::/wuxia/{{page}}/\n修真::/xiuzhen/{{page}}/\n历史::/lishi/{{page}}/\n军事::/junshi/{{page}}/\n科幻::/kehuan/{{page}}/\n灵异::/lingyi/{{page}}/\n同人::/tongren/{{page}}/\n校园::/xiaoyuan/{{page}}/\n官场::/guanchang/{{page}}/\n商战::/shangzhan/{{page}}/\n职场::/zhichang/{{page}}/\n二次元::/erciyuan/{{page}}/\n其他::/qita/{{page}}/",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\"}",
+    "lastUpdateTime": 1698659567803,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "name": "[property$=book_name]@content",
+      "author": "[property$=author]@content",
+      "coverUrl": "[property$=image]@content",
+      "intro": "[property$=description]@content",
+      "kind": "[property~=category|status|update_time]@content",
+      "lastChapter": "[property$=latest_chapter_name]@content"
+    },
+    "ruleContent": {
+      "content": "#content@html"
+    },
+    "ruleExplore": {},
+    "ruleReview": {},
+    "ruleSearch": {
+      "bookList": "ul.content",
+      "name": "a.0@text",
+      "bookUrl": "a.0@href",
+      "author": "a.2@text",
+      "coverUrl": "",
+      "kind": "li.-1@text",
+      "intro": "",
+      "wordCount": "p.1@span@text##字数：",
+      "lastChapter": "a.1@text"
+    },
+    "ruleToc": {
+      "chapterList": ".catalogs@li a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/s_{{key}}",
     "weight": 0
   }
 ]

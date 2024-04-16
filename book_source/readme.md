@@ -13,14 +13,14 @@
 
 ### 精品组（用于书籍搜索和书源切换）
 
-- 平板电子书 https://www.pbtxt8.com
-- 369 小说网 https://www.369book.com/
-- 飞速中文 www.feibzw.com
-- 天涯书库 www.tianyabook.com
+- 平板电子书 https://www.pbtxt8.com 1
+- 369 小说网 https://www.369book.com 1
+- 飞速中文 www.feibzw.com 1
+- 天涯书库 www.tianyabook.com 1
 - 有度中文 www.yodu.org 阅读时非谷歌浏览器显示不全
-- 23 书吧 https://23shu8.net
-- 热游文学网 http://m.fahao.reyoo.net
-- 平板电子书 www.77nt.info
+- 23 书吧 https://23shu8.net 1
+- 热游文学网 http://m.fahao.reyoo.net 1
+- 平板电子书 www.77nt.info 1
 - 千千小说网 www.77xsw.cc 1
 - 星空小说网 www.aixswx.la 1
 - 平凡文学 www.pksge.com 1
