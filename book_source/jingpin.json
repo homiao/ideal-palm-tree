@@ -4125,7 +4125,7 @@
       "chapterName": "text",
       "chapterUrl": "href"
     },
-    "searchUrl": "/search/, {\"method\": \"post\",\"body\":\"searchkey={{key}}\" }",
+    "searchUrl": "{{url=source.getKey();\ncookie.removeCookie(url)}}/search/,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}",
     "weight": 0
   },
   {
@@ -4178,7 +4178,7 @@
     "enabledCookieJar": true,
     "enabledExplore": true,
     "exploreUrl": "奇幻::/qihuan/{{page}}/\n玄幻::/xuanhuan/{{page}}/\n言情::/yanqing/{{page}}/\n都市::/dushi/{{page}}/\n游戏::/youxi/{{page}}/\n竞技::/jingji/{{page}}/\n武侠::/wuxia/{{page}}/\n修真::/xiuzhen/{{page}}/\n历史::/lishi/{{page}}/\n军事::/junshi/{{page}}/\n科幻::/kehuan/{{page}}/\n灵异::/lingyi/{{page}}/\n同人::/tongren/{{page}}/\n校园::/xiaoyuan/{{page}}/\n官场::/guanchang/{{page}}/\n商战::/shangzhan/{{page}}/\n职场::/zhichang/{{page}}/\n二次元::/erciyuan/{{page}}/\n其他::/qita/{{page}}/",
-    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\"}",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\", \"Connection\":\"keep-alive\",  \"Referer\":\"{{baseUrl}}\"}",
     "lastUpdateTime": 1698659567803,
     "respondTime": 180000,
     "ruleBookInfo": {
@@ -4211,6 +4211,66 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/s_{{key}}",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "自制",
+    "bookSourceName": "格格党",
+    "bookSourceType": 0,
+    "bookSourceUrl": "http://www.52ggd.com",
+    "bookUrlPattern": "",
+    "customOrder": 29,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": true,
+    "exploreUrl": [
+      { "title": "玄幻小说", "url": "/sort/xuanhuan/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "仙侠小说", "url": "/sort/xianxia/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "都市小说", "url": "/sort/dushi/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "历史军事", "url": "/sort/lishi/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "游戏竞技", "url": "/sort/youxi/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "科幻小说", "url": "/sort/kehuan/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "恐怖小说", "url": "/sort/kongbu/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "其他类型", "url": "/sort/qita/{{page}}/", "style": { "layout_flexBasisPercent": 0.25 } }
+    ],
+    "header": "",
+    "lastUpdateTime": 1705726318717,
+    "respondTime": 180030,
+    "ruleBookInfo": {
+      "author": "class.p_author@tag.a@text",
+      "coverUrl": "id.bookimg@tag.img@src",
+      "intro": "id.bookintro@tag.p@text",
+      "kind": "id.count@tag.ul@tag.li.0@tag.span@text",
+      "lastChapter": "class.chaw@tag.li.0@tag.a@text",
+      "name": "class.d_title@tag.h1@text",
+      "wordCount": "id.count@tag.ul@tag.li.1@tag.span@text"
+    },
+    "ruleContent": {
+      "content": "id.TextContent@html",
+      "nextContentUrl": "text.下一页@href",
+      "replaceRegex": ""
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "class.book_other@tag.span.0@text",
+      "bookList": "id.sitebox@dl",
+      "bookUrl": "tag.h3@tag.a.0@href",
+      "kind": "",
+      "name": "tag.h3@tag.a.0@text",
+      "checkKeyWord": "我的",
+      "wordCount": "class.book_other@tag.span.2@text",
+      "lastChapter": "class.book_other@tag.a.0@text",
+      "intro": "class.book_des.0@text",
+      "coverUrl": "tag.dt@tag.a.0@tag.img@src"
+    },
+    "ruleToc": {
+      "chapterList": "class.chaw_c@tag.li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href",
+      "nextTocUrl": ""
+    },
+    "searchUrl": "<js>\ncookie.removeCookie(source.bookSourceUrl);\n</js>\n/search/,{\n\"charset\": \"UTF-8\",\n\"method\": \"POST\",\n\"body\": \"searchkey={{key}}\"}",
     "weight": 0
   }
 ]
