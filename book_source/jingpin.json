@@ -179,6 +179,71 @@
     "weight": 99
   },
   {
+    "bookSourceGroup": "正版",
+    "bookSourceName": "阿里文学",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.aliwx.com.cn",
+    "bookUrlPattern": "",
+    "customOrder": 1,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": "点击榜::/ranklist?rank=allClick&page={{page}}\n完结榜::/ranklist?rank=allEnd&page={{page}}\n收藏榜::/ranklist?rank=allStore&page={{page}}\n人气榜::/ranklist?rank=allNew&page={{page}}\n订阅榜::/ranklist?rank=allOrder&page={{page}}\n都市::/store?sz=0&fc=都市小说&page={{page}}\n玄幻::/store?sz=0&fc=玄幻小说&page={{page}}\n仙侠::/store?sz=0&fc=仙侠小说&page={{page}}\n灵异::/store?sz=0&fc=灵异推理&page={{page}}\n历史::/store?sz=0&fc=历史架空&page={{page}}\n游戏::/store?sz=0&fc=游戏竞技&page={{page}}\n科幻::/store?sz=0&fc=科幻小说&page={{page}}\n武侠::/store?sz=0&fc=武侠小说&page={{page}}\n奇幻::/store?sz=0&fc=奇幻小说&page={{page}}\n竞技::/store?sz=0&fc=竞技体育&page={{page}}\n其他::/store?sz=0&fc=耽美小说&page={{page}}\n现言::/store?sz=0&fc=现代言情&page={{page}}\n古言::/store?sz=0&fc=古代言情&page={{page}}\n幻言::/store?sz=0&fc=幻想言情&page={{page}}",
+    "header": "",
+    "lastUpdateTime": 0,
+    "loginUrl": "",
+    "respondTime": 2504,
+    "ruleBookInfo": {
+      "author": "",
+      "coverUrl": "",
+      "init": "",
+      "intro": "",
+      "kind": "",
+      "lastChapter": "",
+      "name": "",
+      "tocUrl": "class.operates clear@tag.a.1@href",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": "@js:\nfunction decodeCont(r) {\n  return (function(r) {\n var o, t,e, a, n, C,\nh = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=', d = '', f = 0;\n for (r = r.replace(/[^A-Za-z0-9\\+\\/\\=]/g, ''); f < r.length; )\n (o =\n (h.indexOf(r.charAt(f++)) << 2) |\n        ((a = h.indexOf(r.charAt(f++))) >> 4)),\n        (t = ((15 & a) << 4) | ((n = h.indexOf(r.charAt(f++))) >> 2)),\n        (e = ((3 & n) << 6) | (C = h.indexOf(r.charAt(f++)))),\n        (d += String.fromCharCode(o)),\n        64 != n && (d += String.fromCharCode(t)),\n 64 != C && (d += String.fromCharCode(e));\n    return (function(r) {\n      for (var o, t = '', e = 0, a = 0, n = 0; e < r.length; )\n (a = r.charCodeAt(e)) < 128\n          ? ((t += String.fromCharCode(a)), e++)\n          : 191 < a && a < 224\n          ? ((n = r.charCodeAt(e + 1)),\n (t += String.fromCharCode(((31 & a) << 6) | (63 & n))),\n            (e += 2))\n          : ((n = r.charCodeAt(e + 1)),\n            (o = r.charCodeAt(e + 2)),\n            (t += String.fromCharCode(\n              ((15 & a) << 12) | ((63 & n) << 6) | (63 & o)\n            )),\n (e += 3));\n return t;\n })(d);\n  })(\n    (r = r\n      .split('')\n      .map(function(r) {\n        var o, t;\n        return r.match(/[A-Za-z]/)\n          ? ((o = Math.floor(r.charCodeAt(0) / 97)),\n            (t = (r.toLowerCase().charCodeAt(0) - 83) % 26 || 26),\n String.fromCharCode(t + (0 == o ? 64 : 96)))\n          : r;\n      })\n      .join(''))\n  );\n}\nvar cid = baseUrl.match(/cid=(\\d+)/)[1];\nvar regex = new RegExp('(\\\\?bookId=[^,]+chapterId=' + cid + '[^,]+num=[^,]+)&quot;');\nvar params = result.match(regex)[1];\nvar prefix = result.match(/freeContUrlPrefix[^,]+;([^,]+)&quot;/)[1];\nvar url = prefix + params;\nurl = String(url).replace(/amp;/g, '');\nvar data = JSON.parse(java.ajax(url));\ndecodeCont(data.ChapterContent);",
+      "nextContentUrl": "",
+      "sourceRegex": "",
+      "webJs": ""
+    },
+    "ruleExplore": {
+      "author": ".bkuser-icon@text",
+      "bookList": ".ranklist-ul@li||.store-ul@li",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "intro": ".ranklist-des@text||.store-des@text",
+      "kind": ".bkcate-icon@text",
+      "lastChapter": "",
+      "name": "h3@text",
+      "wordCount": ""
+    },
+    "ruleSearch": {
+      "author": ".book-autor@a@text||class.bauthor@text##著",
+      "bookList": ".searchlist-main@li||.matchbook",
+      "bookUrl": "a@href",
+      "coverUrl": "img@src",
+      "intro": ".book-newc@text||.bookDesc@text",
+      "kind": ".lastchapter@li.1@text||tag.p.2@text##分类：",
+      "lastChapter": "",
+      "name": "h3.0@text||.bname.0@text",
+      "wordCount": ""
+    },
+    "ruleToc": {
+      "chapterList": ".chapterul a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "isVip": "",
+      "nextTocUrl": "",
+      "updateTime": ""
+    },
+    "searchUrl": "/search?keyword={{key}}&page={{page}}",
+    "weight": 0
+  },
+  {
     "bookSourceComment": "",
     "bookSourceGroup": "正版",
     "bookSourceName": "纵横中文网",
@@ -413,6 +478,83 @@
     "ruleContent": {
       "content": "class.noveContent@html"
     }
+  },
+  {
+    "bookSourceGroup": "正版",
+    "bookSourceName": "奇迹作品",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.qijizuopin.com",
+    "bookUrlPattern": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "exploreUrl": [
+      { "title": "男生榜单", "url": "", "style": { "layout_flexBasisPercent": 1 } },
+      { "title": "人气榜", "url": "/ranking/2-2-1-1", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "完本榜", "url": "/ranking/2-2-1-3", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "更新榜", "url": "/ranking/2-2-1-4", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "月票榜", "url": "/ranking/7-1-1", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "玄幻奇幻", "url": "/ranking/1", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "都市小说", "url": "/ranking/2", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "仙侠武侠", "url": "/ranking/3", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "历史军事", "url": "/ranking/4", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "悬疑灵异", "url": "/ranking/5", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "游戏竞技", "url": "/ranking/6", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "科幻末世", "url": "/ranking/7", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "N次元", "url": "/ranking/8", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "女生榜单", "url": "", "style": { "layout_flexBasisPercent": 1 } },
+      { "title": "人气榜", "url": "/ranking/2-3-1-1", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "完本榜", "url": "/ranking/2-3-1-3", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "更新榜", "url": "/ranking/2-3-1-4", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "月票榜", "url": "/ranking/7-2-1", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "古代言情", "url": "/ranking/9", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "现代言情", "url": "/ranking/10", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "浪漫青春", "url": "/ranking/11", "style": { "layout_flexBasisPercent": 0.25 } },
+      { "title": "幻想言情", "url": "/ranking/12", "style": { "layout_flexBasisPercent": 0.25 } }
+    ],
+    "lastUpdateTime": 0,
+    "loginUrl": "",
+    "respondTime": 997,
+    "ruleBookInfo": {
+      "author": "",
+      "coverUrl": ".book-cover img.0@src",
+      "intro": ".block p.0@text",
+      "kind": "",
+      "lastChapter": "",
+      "name": "h1.0@text"
+    },
+    "ruleContent": {
+      "content": ".content@html",
+      "nextContentUrl": ""
+    },
+    "ruleExplore": {
+      "bookList": "main .flex-row",
+      "bookUrl": "a.1@href",
+      "coverUrl": "img.0@src",
+      "intro": "p.1@text",
+      "kind": "",
+      "lastChapter": "p.2@a@text",
+      "name": "h3.0@text",
+      "author": "p.0@span.0@text"
+    },
+    "ruleSearch": {
+      "bookList": "main .mr-16",
+      "bookUrl": "a.1@href",
+      "coverUrl": "img.0@src",
+      "intro": "p.0@text",
+      "kind": "a.1@div.1@span.2@text",
+      "lastChapter": "p.1@a@text##最近更新：",
+      "name": "h3.0@text",
+      "author": "a.1@span.1@text"
+    },
+    "ruleToc": {
+      "chapterList": ".hidden@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "searchUrl": "/so/{{key}}",
+    "weight": 0
   },
   {
     "bookSourceComment": "",
@@ -4594,13 +4736,12 @@
     "enabledExplore": true,
     "exploreUrl": "奇幻::/qihuan/{{page}}/\n玄幻::/xuanhuan/{{page}}/\n言情::/yanqing/{{page}}/\n都市::/dushi/{{page}}/\n游戏::/youxi/{{page}}/\n竞技::/jingji/{{page}}/\n武侠::/wuxia/{{page}}/\n修真::/xiuzhen/{{page}}/\n历史::/lishi/{{page}}/\n军事::/junshi/{{page}}/\n科幻::/kehuan/{{page}}/\n灵异::/lingyi/{{page}}/\n同人::/tongren/{{page}}/\n校园::/xiaoyuan/{{page}}/\n官场::/guanchang/{{page}}/\n商战::/shangzhan/{{page}}/\n职场::/zhichang/{{page}}/\n二次元::/erciyuan/{{page}}/\n其他::/qita/{{page}}/",
     "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0\", \"Connection\":\"keep-alive\",  \"Referer\":\"{{baseUrl}}\"}",
-    "lastUpdateTime": 1698659567803,
     "respondTime": 180000,
     "ruleBookInfo": {
       "name": "[property$=book_name]@content",
       "author": "[property$=author]@content",
       "coverUrl": "[property$=image]@content",
-      "intro": "[property$=description]@content",
+      "intro": ".catalog p.0@text",
       "kind": "[property~=category|status|update_time]@content",
       "lastChapter": "[property$=latest_chapter_name]@content"
     },
