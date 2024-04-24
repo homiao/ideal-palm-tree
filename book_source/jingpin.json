@@ -709,7 +709,7 @@
       "nextContentUrl": ""
     },
     "ruleExplore": {
-      "bookList": "main .flex-row",
+      "bookList": "main .flex-row!0",
       "bookUrl": "a.1@href",
       "coverUrl": "img.0@src",
       "intro": "p.1@text",
